@@ -34,3 +34,12 @@ rule  "Got help us"
         u.generation = "god help us"
 end  
 
+rule  "New Rules" 
+    when 
+        u: User (age <= 5) 
+    then 
+        u.generation = "new rules"
+end  
+
+
+
