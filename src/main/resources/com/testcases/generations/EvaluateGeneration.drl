@@ -29,7 +29,7 @@ end
 
 rule  "Got help us" 
     when 
-        u: User (age <= 10) 
+        u: User (age <= 12) 
     then 
         u.generation = "god help us"
 end  
