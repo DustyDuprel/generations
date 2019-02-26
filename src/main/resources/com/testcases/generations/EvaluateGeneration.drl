@@ -1,0 +1,36 @@
+package com.testcases.generations;
+import  java.until.* 
+import  com.testcases.generations.User
+dialect 'mvel'
+
+rule "generation x"
+    when 
+        u: User (age > 60) 
+    then 
+        u.generation = "gX"
+        
+end
+
+rule  "millennial"
+    when
+       u: User (age  > 20, age <=60)
+    then
+       u.generation = "gM"
+       u.name = "Changeed"
+end 
+
+rule "generartion z"
+    when 
+        u: User (age <= 20) 
+    then 
+        u.generation = "gz"
+end  
+
+
+rule  "Got help us" 
+    when 
+        u: User (age <= 10) 
+    then 
+        u.generation = "god help us"
+end  
+
